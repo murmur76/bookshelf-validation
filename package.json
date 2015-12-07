@@ -11,10 +11,12 @@
     "url": "https://github.com/murmur76/bookshelf-validation/issues"
   },
   "dependencies": {
+    "bluebird": "^3.0.6",
+    "lodash": "^3.10.1"
   },
   "devDependencies": {
+    "mocha": "^2.3.4"
   },
-  "scripts": {
-   },
+  "scripts": {},
   "license": "MIT"
 }
