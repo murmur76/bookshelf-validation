@@ -25,5 +25,15 @@ module.exports = {
       return Promise.resolve(value);
     });
     return Promise.all(validations).then(() => attrs);
+  },
+  setValidatedAttributes: function (attrs) {
+    if (this.hasTimestamps) {
+      this.hasTimestamps.forEach((key) => {
+        if (this.attributes[key]) {
+          attrs[key] = this.attributes[key];
+        }
+      });
+    }
+    this.attributes = attrs;
   }
 };
