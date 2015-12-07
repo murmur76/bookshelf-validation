@@ -16,7 +16,8 @@
   },
   "devDependencies": {
     "knex": "^0.9.0",
-    "mocha": "^2.3.4"
+    "mocha": "^2.3.4",
+    "validator": "^4.4.0"
   },
   "scripts": {},
   "license": "MIT"
