@@ -118,7 +118,7 @@ describe('bookshelf-validation', () => {
     });
   });
 
-  it('should filter atributes not defined', (done) => {
+  it('should filter attributes not defined', (done) => {
     return User.forge(_.extend(_.clone(user), { email: 'test2@user.com', height: 180, weight: 70 })).save().then((created) => {
       assert.ok(_.isNumber(created.id));
       assert.ok(_.isDate(created.get('updatedAt')));
