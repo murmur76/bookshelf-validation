@@ -104,6 +104,20 @@ describe('bookshelf-validation', () => {
     });
   });
 
+  it('should able to create model without not required fields', (done) => {
+    let userWithoutFields = _.omit(user, 'age', 'profileImage', 'gender');
+    userWithoutFields.email = 'testtest@user.com';
+    return User.forge(userWithoutFields).save().then((created) => {
+      assert.ok(_.isNumber(created.id));
+      assert.ok(_.isDate(created.get('updatedAt')));
+      assert.ok(_.isDate(created.get('createdAt')));
+      assert.ok(!created.get('age'));
+      assert.ok(!created.get('profileImage'));
+      assert.ok(!created.get('gender'));
+      done();
+    });
+  });
+
   it('should filter atributes not defined', (done) => {
     return User.forge(_.extend(_.clone(user), { email: 'test2@user.com', height: 180, weight: 70 })).save().then((created) => {
       assert.ok(_.isNumber(created.id));
