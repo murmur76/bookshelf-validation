@@ -16,5 +16,14 @@ module.exports = {
       }
       return attrs;
     }, {});
+  },
+  validateAttributes: function (attrs) {
+    let validations = _.map(attrs, (value, field) => {
+      if (!this.rules[field].validator(value)) {
+        return Promise.reject(new Error(field + ': validation failed at ' + value));
+      }
+      return Promise.resolve(value);
+    });
+    return Promise.all(validations).then(() => attrs);
   }
 };
