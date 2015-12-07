@@ -1,0 +1,20 @@
+{
+  "name": "bookshelf-validation",
+  "version": "0.0.1",
+  "description": "A simple & flexible model validation plugin for bookshelf",
+  "author": "Dong Ju Kang <celica212@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/murmur76/bookshelf-validation"
+  },
+  "bugs": {
+    "url": "https://github.com/murmur76/bookshelf-validation/issues"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+   },
+  "license": "MIT"
+}
