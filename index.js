@@ -11,7 +11,7 @@ module.exports = function (bookshelf) {
 
     validate: function (model, attrs, options) {
       return Promise.resolve(null)
-      .then(util.collectAndCheckMissingAttributes.bind(this))
+      .then(util.collectAndCheckMissingAttributes.bind(this, options))
       .then(util.validateAttributes.bind(this))
       .then(util.setValidatedAttributes.bind(this));
     }

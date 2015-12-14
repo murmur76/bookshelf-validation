@@ -126,4 +126,11 @@ describe('bookshelf-validation', () => {
       done();
     });
   });
+
+  it("should not create model if save option's method is set to `insert` even if it has `id` field", (done) => {
+    return User.forge({ id: 100 }).save(_.omit(_.clone(user), 'name'), { method: 'insert' }).catch((err) => {
+      assert.equal(err.message, 'Missing Attribute: name');
+      done();
+    });
+  });
 });
