@@ -1,6 +1,6 @@
 {
   "name": "bookshelf-validation",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A simple & flexible model validation plugin for bookshelf",
   "author": "Dong Ju Kang <celica212@gmail.com>",
   "keywords": [
