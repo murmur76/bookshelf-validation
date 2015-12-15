@@ -11,8 +11,7 @@ module.exports = {
         attrs[field] = value;
         return attrs;
       }
-      let isInserting = this.isNew() || options.method === 'insert';
-      if (rule.required && isInserting) {
+      if (rule.required && options.method === 'insert') {
         return Promise.reject(new Error('Missing Attribute: ' + field));
       }
       return attrs;
