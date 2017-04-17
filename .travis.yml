@@ -1,3 +1,5 @@
+notifications:
+  hipchat: de84a9ce4c942d9427574e70c96cd9@3770966
 language: node_js
 node_js:
     "4.0"
