@@ -1,6 +1,5 @@
 notifications:
   hipchat: de84a9ce4c942d9427574e70c96cd9@3770966
-notifications:
   slack: mallard-team:R5ohwoHeHq8s5qdCdKLI1BYu
 language: node_js
 node_js:
