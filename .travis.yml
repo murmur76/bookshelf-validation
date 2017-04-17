@@ -5,3 +5,5 @@ install:
   - "npm install"
 script:
   - "mocha test"
+notifications:
+  hipchat: de84a9ce4c942d9427574e70c96cd9@3770966
